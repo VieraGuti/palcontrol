@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {encodePacket,decodePackets} from '../src/palworld/rcon-client.mjs';
+test('Source RCON packet length and decoding follow protocol framing',()=>{const p=encodePacket(42,2,'Info');assert.equal(p.readInt32LE(0),10+Buffer.byteLength('Info'));assert.equal(p.length,p.readInt32LE(0)+4);const d=decodePackets(p);assert.equal(d.rest.length,0);assert.deepEqual(d.packets[0],{id:42,type:2,body:'Info'});});

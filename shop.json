@@ -1,0 +1,828 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "money-1000",
+      "name": "1,000 Gold",
+      "description": "Adds 1,000 Gold to the linked character.",
+      "category": "Currency",
+      "price": 80,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Money",
+          "Count": 1000
+        }
+      ]
+    },
+    {
+      "id": "money-10000",
+      "name": "10,000 Gold",
+      "description": "Adds 10,000 Gold to the linked character.",
+      "category": "Currency",
+      "price": 650,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Money",
+          "Count": 10000
+        }
+      ]
+    },
+    {
+      "id": "money-50000",
+      "name": "50,000 Gold",
+      "description": "A large Gold bundle for trading and server progression.",
+      "category": "Currency",
+      "price": 2800,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Money",
+          "Count": 50000
+        }
+      ]
+    },
+    {
+      "id": "sphere-basic-pack",
+      "name": "Basic Sphere Pack",
+      "description": "20 Pal Spheres for early-game captures.",
+      "category": "Capture",
+      "price": 75,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere",
+          "Count": 20
+        }
+      ]
+    },
+    {
+      "id": "sphere-mega-pack",
+      "name": "Mega Sphere Pack",
+      "description": "15 Mega Spheres for stronger capture attempts.",
+      "category": "Capture",
+      "price": 150,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Mega",
+          "Count": 15
+        }
+      ]
+    },
+    {
+      "id": "sphere-giga-pack",
+      "name": "Giga Sphere Pack",
+      "description": "10 Giga Spheres for mid-tier captures.",
+      "category": "Capture",
+      "price": 250,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Giga",
+          "Count": 10
+        }
+      ]
+    },
+    {
+      "id": "sphere-hyper-pack",
+      "name": "Hyper Sphere Pack",
+      "description": "10 Hyper Spheres for difficult captures.",
+      "category": "Capture",
+      "price": 400,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Tera",
+          "Count": 10
+        }
+      ]
+    },
+    {
+      "id": "sphere-master-pack",
+      "name": "Master Sphere Pack",
+      "description": "5 Master Spheres for high-end capture attempts.",
+      "category": "Capture",
+      "price": 650,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Master",
+          "Count": 5
+        }
+      ]
+    },
+    {
+      "id": "sphere-legendary-pack",
+      "name": "Legendary Sphere Pack",
+      "description": "5 Legendary Spheres for end-game captures.",
+      "category": "Capture",
+      "price": 900,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Legend",
+          "Count": 5
+        }
+      ]
+    },
+    {
+      "id": "sphere-ultimate-pack",
+      "name": "Ultimate Sphere Pack",
+      "description": "3 Ultimate Spheres. Premium end-game capture supply.",
+      "category": "Capture",
+      "price": 1250,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Ultimate",
+          "Count": 3
+        }
+      ]
+    },
+    {
+      "id": "sphere-exotic-pack",
+      "name": "Exotic Sphere Pack",
+      "description": "2 Exotic Spheres. Rare premium capture supply.",
+      "category": "Capture",
+      "price": 1750,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PalSphere_Exotic",
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "id": "builder-pack",
+      "name": "Builder Pack",
+      "description": "Core materials for expanding a base quickly.",
+      "category": "Resources",
+      "price": 100,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Wood",
+          "Count": 500
+        },
+        {
+          "ItemID": "Stone",
+          "Count": 500
+        },
+        {
+          "ItemID": "Fiber",
+          "Count": 200
+        }
+      ]
+    },
+    {
+      "id": "crafting-pack",
+      "name": "Crafting Pack",
+      "description": "Useful general-purpose crafting materials.",
+      "category": "Resources",
+      "price": 150,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Cloth",
+          "Count": 50
+        },
+        {
+          "ItemID": "Leather",
+          "Count": 50
+        },
+        {
+          "ItemID": "Bone",
+          "Count": 50
+        }
+      ]
+    },
+    {
+      "id": "industrial-pack",
+      "name": "Industrial Pack",
+      "description": "Industrial materials for advanced building and crafting.",
+      "category": "Resources",
+      "price": 350,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "IronIngot",
+          "Count": 100
+        },
+        {
+          "ItemID": "Coal",
+          "Count": 100
+        },
+        {
+          "ItemID": "Cement",
+          "Count": 50
+        },
+        {
+          "ItemID": "Gunpowder",
+          "Count": 50
+        }
+      ]
+    },
+    {
+      "id": "advanced-materials-pack",
+      "name": "Advanced Materials Pack",
+      "description": "High-tier resources for advanced crafting.",
+      "category": "Resources",
+      "price": 750,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "StealIngot",
+          "Count": 50
+        },
+        {
+          "ItemID": "CarbonFiber",
+          "Count": 50
+        },
+        {
+          "ItemID": "CrudeOil",
+          "Count": 50
+        },
+        {
+          "ItemID": "ElectronicCircuit",
+          "Count": 20
+        }
+      ]
+    },
+    {
+      "id": "elemental-organ-pack",
+      "name": "Elemental Organ Pack",
+      "description": "A mixed supply of Fire, Ice and Electric Organs.",
+      "category": "Resources",
+      "price": 180,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "FireOrgan",
+          "Count": 50
+        },
+        {
+          "ItemID": "IceOrgan",
+          "Count": 50
+        },
+        {
+          "ItemID": "ElectricOrgan",
+          "Count": 50
+        }
+      ]
+    },
+    {
+      "id": "arrow-pack",
+      "name": "Arrow Pack",
+      "description": "200 standard arrows.",
+      "category": "Ammo",
+      "price": 80,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Arrow",
+          "Count": 200
+        }
+      ]
+    },
+    {
+      "id": "special-arrow-pack",
+      "name": "Special Arrow Pack",
+      "description": "A mixed bundle of Fire and Poison Arrows.",
+      "category": "Ammo",
+      "price": 150,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Arrow_Fire",
+          "Count": 100
+        },
+        {
+          "ItemID": "Arrow_Poison",
+          "Count": 100
+        }
+      ]
+    },
+    {
+      "id": "handgun-ammo-pack",
+      "name": "Handgun Ammo Pack",
+      "description": "200 Handgun rounds.",
+      "category": "Ammo",
+      "price": 120,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "HandgunBullet",
+          "Count": 200
+        }
+      ]
+    },
+    {
+      "id": "rifle-ammo-pack",
+      "name": "Rifle Ammo Pack",
+      "description": "150 Rifle rounds.",
+      "category": "Ammo",
+      "price": 175,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "RifleBullet",
+          "Count": 150
+        }
+      ]
+    },
+    {
+      "id": "assault-ammo-pack",
+      "name": "Assault Rifle Ammo Pack",
+      "description": "300 Assault Rifle rounds.",
+      "category": "Ammo",
+      "price": 300,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "AssaultRifleBullet",
+          "Count": 300
+        }
+      ]
+    },
+    {
+      "id": "shotgun-ammo-pack",
+      "name": "Shotgun Ammo Pack",
+      "description": "100 Shotgun shells.",
+      "category": "Ammo",
+      "price": 250,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "ShotgunBullet",
+          "Count": 100
+        }
+      ]
+    },
+    {
+      "id": "field-rations",
+      "name": "Field Rations",
+      "description": "A simple food supply for exploration.",
+      "category": "Food",
+      "price": 40,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Berries",
+          "Count": 100
+        }
+      ]
+    },
+    {
+      "id": "cooked-rations",
+      "name": "Cooked Rations",
+      "description": "A larger supply of cooked berries.",
+      "category": "Food",
+      "price": 90,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Baked_Berries",
+          "Count": 100
+        }
+      ]
+    },
+    {
+      "id": "breeding-cake-pack",
+      "name": "Breeding Cake Pack",
+      "description": "10 Cakes for breeding-focused players.",
+      "category": "Food",
+      "price": 350,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Cake",
+          "Count": 10
+        }
+      ]
+    },
+    {
+      "id": "expedition-food-pack",
+      "name": "Expedition Food Pack",
+      "description": "A mixed prepared-food supply for longer expeditions.",
+      "category": "Food",
+      "price": 220,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "JamBun",
+          "Count": 20
+        },
+        {
+          "ItemID": "Hamburger",
+          "Count": 10
+        },
+        {
+          "ItemID": "CheeseBurger",
+          "Count": 10
+        }
+      ]
+    },
+    {
+      "id": "medicine-pack",
+      "name": "Medicine Pack",
+      "description": "General medicine supplies.",
+      "category": "Medicine",
+      "price": 250,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Medicines",
+          "Count": 10
+        },
+        {
+          "ItemID": "Herbs",
+          "Count": 20
+        }
+      ]
+    },
+    {
+      "id": "luxury-medicine-pack",
+      "name": "Luxury Medicine Pack",
+      "description": "Premium medical supplies for difficult situations.",
+      "category": "Medicine",
+      "price": 600,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "LuxuryMedicines",
+          "Count": 5
+        }
+      ]
+    },
+    {
+      "id": "technology-book-i",
+      "name": "Technology Book I",
+      "description": "A Technology Book from the current Palworld item catalog.",
+      "category": "Technology",
+      "price": 450,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "TechnologyBook_G1",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "technology-book-ii",
+      "name": "Technology Book II",
+      "description": "A higher-tier Technology Book.",
+      "category": "Technology",
+      "price": 900,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "TechnologyBook_G2",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "technology-book-iii",
+      "name": "Technology Book III",
+      "description": "A high-tier Technology Book.",
+      "category": "Technology",
+      "price": 1600,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "TechnologyBook_G3",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "ancient-technology-book",
+      "name": "Ancient Technology Book",
+      "description": "An Ancient Technology Book from the current item catalog.",
+      "category": "Technology",
+      "price": 2200,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "AncientTechnologyBook_G1",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "sword-pack",
+      "name": "Sword Pack",
+      "description": "A standard Sword for close-range combat.",
+      "category": "Weapons",
+      "price": 350,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Sword",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "spear-pack",
+      "name": "Spear Pack",
+      "description": "A standard Spear for hunting and combat.",
+      "category": "Weapons",
+      "price": 300,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "Spear",
+          "Count": 1
+        }
+      ]
+    },
+    {
+      "id": "handgun-pack",
+      "name": "Handgun Pack",
+      "description": "A Hand Gun with 200 rounds.",
+      "category": "Weapons",
+      "price": 900,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "HandGun_Default",
+          "Count": 1
+        },
+        {
+          "ItemID": "HandgunBullet",
+          "Count": 200
+        }
+      ]
+    },
+    {
+      "id": "shotgun-pack",
+      "name": "Pump Shotgun Pack",
+      "description": "A Pump Action Shotgun with 100 shells.",
+      "category": "Weapons",
+      "price": 1800,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "PumpActionShotgun",
+          "Count": 1
+        },
+        {
+          "ItemID": "ShotgunBullet",
+          "Count": 100
+        }
+      ]
+    },
+    {
+      "id": "assault-rifle-pack",
+      "name": "Assault Rifle Pack",
+      "description": "An Assault Rifle with 300 rounds.",
+      "category": "Weapons",
+      "price": 2500,
+      "type": "items",
+      "items": [
+        {
+          "ItemID": "AssaultRifle_Default1",
+          "Count": 1
+        },
+        {
+          "ItemID": "AssaultRifleBullet",
+          "Count": 300
+        }
+      ]
+    },
+    {
+      "id": "pal-lamball-10",
+      "name": "Lamball Lv.10",
+      "description": "A starter Lamball delivered to your linked character.",
+      "category": "Pals",
+      "price": 250,
+      "type": "pals",
+      "pals": [
+        {
+          "PalID": "SheepBall",
+          "Level": 10
+        }
+      ]
+    },
+    {
+      "id": "pal-foxparks-15",
+      "name": "Foxparks Lv.15",
+      "description": "A useful early-game Fire Pal for combat and Kindling.",
+      "category": "Pals",
+      "price": 450,
+      "type": "pals",
+      "pals": [
+        {
+          "PalID": "Kitsunebi",
+          "Level": 15
+        }
+      ]
+    },
+    {
+      "id": "pal-direhowl-20",
+      "name": "Direhowl Lv.20",
+      "description": "A fast early mount and exploration Pal.",
+      "category": "Pals",
+      "price": 800,
+      "type": "pals",
+      "pals": [
+        {
+          "PalID": "Garm",
+          "Level": 20
+        }
+      ]
+    },
+    {
+      "id": "pal-anubis-40",
+      "name": "Anubis Lv.40",
+      "description": "A powerful Ground Pal with excellent Handiwork and Mining.",
+      "category": "Pals",
+      "price": 3000,
+      "type": "pals",
+      "pals": [
+        {
+          "PalID": "Anubis",
+          "Level": 40
+        }
+      ]
+    },
+    {
+      "id": "pal-jetragon-50",
+      "name": "Jetragon Lv.50",
+      "description": "A premium Dragon Pal and extremely fast flying mount.",
+      "category": "Pals",
+      "price": 6500,
+      "type": "pals",
+      "pals": [
+        {
+          "PalID": "JetDragon",
+          "Level": 50
+        }
+      ]
+    }
+  ],
+  "kits": [
+    {
+      "id": "start",
+      "name": "Start Kit",
+      "description": "Balanced starter supplies. Once every 24 hours.",
+      "cooldownMs": 86400000,
+      "items": [
+        {
+          "ItemID": "PalSphere",
+          "Count": 15
+        },
+        {
+          "ItemID": "Wood",
+          "Count": 150
+        },
+        {
+          "ItemID": "Stone",
+          "Count": 150
+        },
+        {
+          "ItemID": "Fiber",
+          "Count": 50
+        },
+        {
+          "ItemID": "Berries",
+          "Count": 50
+        },
+        {
+          "ItemID": "Money",
+          "Count": 500
+        }
+      ],
+      "aliases": [
+        "starter",
+        "beginner"
+      ]
+    },
+    {
+      "id": "builder",
+      "name": "Builder Kit",
+      "description": "Daily building materials for base expansion.",
+      "cooldownMs": 86400000,
+      "items": [
+        {
+          "ItemID": "Wood",
+          "Count": 300
+        },
+        {
+          "ItemID": "Stone",
+          "Count": 300
+        },
+        {
+          "ItemID": "Fiber",
+          "Count": 100
+        },
+        {
+          "ItemID": "Cloth",
+          "Count": 20
+        },
+        {
+          "ItemID": "Cement",
+          "Count": 10
+        }
+      ],
+      "aliases": [
+        "build",
+        "resources"
+      ]
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter Kit",
+      "description": "Daily capture and expedition supplies.",
+      "cooldownMs": 86400000,
+      "items": [
+        {
+          "ItemID": "PalSphere",
+          "Count": 10
+        },
+        {
+          "ItemID": "PalSphere_Mega",
+          "Count": 5
+        },
+        {
+          "ItemID": "Arrow",
+          "Count": 100
+        },
+        {
+          "ItemID": "Baked_Berries",
+          "Count": 40
+        }
+      ],
+      "aliases": [
+        "capture",
+        "hunt"
+      ]
+    },
+    {
+      "id": "breeder",
+      "name": "Breeder Kit",
+      "description": "Breeding supplies. Available every 48 hours.",
+      "cooldownMs": 172800000,
+      "items": [
+        {
+          "ItemID": "Cake",
+          "Count": 2
+        },
+        {
+          "ItemID": "Berries",
+          "Count": 100
+        },
+        {
+          "ItemID": "Money",
+          "Count": 1000
+        }
+      ],
+      "aliases": [
+        "breeding",
+        "breed"
+      ]
+    },
+    {
+      "id": "vip",
+      "name": "VIP Kit",
+      "description": "Enhanced VIP supplies. Once every 24 hours.",
+      "role": "vip",
+      "cooldownMs": 86400000,
+      "items": [
+        {
+          "ItemID": "PalSphere",
+          "Count": 25
+        },
+        {
+          "ItemID": "PalSphere_Mega",
+          "Count": 15
+        },
+        {
+          "ItemID": "PalSphere_Giga",
+          "Count": 5
+        },
+        {
+          "ItemID": "Money",
+          "Count": 2500
+        },
+        {
+          "ItemID": "Baked_Berries",
+          "Count": 100
+        },
+        {
+          "ItemID": "Medicines",
+          "Count": 3
+        }
+      ],
+      "aliases": [
+        "premium",
+        "donator"
+      ]
+    }
+  ]
+}

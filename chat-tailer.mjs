@@ -1,0 +1,16 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const CHAT_RE=/\[Chat::(?:Global|Local)\]\['([^']+)'.*\]:\s*(.*)$/;
+const LINK_RE=/\[Chat::(?:Global|Local)\]\['([^']+)'\s*\(UserId=([^,]+),.*\]:\s*[!/]link\s+([A-Z0-9]+)/i;
+const COMMAND_RE=/\[Chat::(?:Global|Local)\]\['([^']+)'\s*\(UserId=([^,]+),.*\]:\s*!([a-z0-9_-]+)(?:\s+(.*))?$/i;
+
+export class PalDefenderTailer {
+  constructor({logDir,intervalMs=3000,beforeTick=null,onChat,onLink,onCommand,logger=console}){this.logDir=logDir;this.intervalMs=intervalMs;this.beforeTick=beforeTick;this.onChat=onChat;this.onLink=onLink;this.onCommand=onCommand;this.logger=logger;this.timer=null;this.currentFile=null;this.offset=0;this.remainder='';this.running=false;this.nextAttemptAt=0;this.lastError='';this.lastErrorLogAt=0;}
+  get enabled(){return Boolean(this.logDir);}
+  start(){if(!this.enabled||this.timer)return;this.tick();this.timer=setInterval(()=>this.tick(),this.intervalMs);}
+  stop(){clearInterval(this.timer);this.timer=null;}
+  async latestFile(){const entries=await fs.readdir(this.logDir,{withFileTypes:true});const files=[];for(const e of entries.filter(e=>e.isFile()&&/\.(log|txt)$/i.test(e.name))){const full=path.join(this.logDir,e.name);const st=await fs.stat(full);files.push({full,mtime:st.mtimeMs,size:st.size});}return files.sort((a,b)=>b.mtime-a.mtime)[0]??null;}
+  async tick(){if(this.running||Date.now()<this.nextAttemptAt)return;this.running=true;try{if(this.beforeTick)await this.beforeTick();const latest=await this.latestFile();if(!latest)return;if(latest.full!==this.currentFile){const firstFile=this.currentFile===null;this.currentFile=latest.full;this.offset=firstFile?latest.size:0;this.remainder='';if(firstFile)return;}if(latest.size<this.offset)this.offset=0;if(latest.size===this.offset)return;const fh=await fs.open(latest.full,'r');const len=latest.size-this.offset;const buf=Buffer.alloc(len);await fh.read(buf,0,len,this.offset);await fh.close();this.offset=latest.size;const text=this.remainder+buf.toString('utf8');const lines=text.split(/\r?\n/);this.remainder=lines.pop()??'';for(const line of lines)await this.processLine(line);this.lastError='';this.nextAttemptAt=0;}catch(err){const message=String(err?.message??err);const permanent=/\b550\b|path does not exist/i.test(message);this.nextAttemptAt=Date.now()+(permanent?60000:Math.max(this.intervalMs,10000));if(message!==this.lastError||Date.now()-this.lastErrorLogAt>60000){this.logger.warn?.('[chat-tailer]',`${message}${permanent?' (retrying in 60s; verify PALDEFENDER_REMOTE_LOG_PATH or disable it)':''}`);this.lastError=message;this.lastErrorLogAt=Date.now();}}finally{this.running=false;}}
+  async processLine(line){const link=LINK_RE.exec(line);if(link)await this.onLink?.({playerName:link[1],userId:link[2],code:link[3].toUpperCase(),raw:line});const command=COMMAND_RE.exec(line);if(command)await this.onCommand?.({playerName:command[1],userId:command[2],command:command[3].toLowerCase(),args:(command[4]??'').trim().split(/\s+/).filter(Boolean),raw:line});const chat=CHAT_RE.exec(line);if(chat){const message=chat[2].trim();if(!message||/^[!/]/.test(message))return;await this.onChat?.({playerName:chat[1],message,raw:line});}}
+}
+export{CHAT_RE,LINK_RE,COMMAND_RE};

@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+!.env.cybrancee.example
+data/*.sqlite*
+backups/*
+!backups/.gitkeep
+.release/
+.DS_Store
+
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Release bundles
+.release/
+
+# Runtime
+logs/
+tmp/
+cache/
+
+# Editors
+.vscode/
+.idea/
