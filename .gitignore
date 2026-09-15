@@ -1,0 +1,38 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.cybrancee.example
+
+# Dependencies
+node_modules/
+
+# Runtime data
+data/
+backups/*
+!backups/.gitkeep
+logs/
+tmp/
+temp/
+.cache/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Release bundles / archives
+.release/
+*.zip
+*.tar
+*.tar.gz
+*.tar.xz
+
+# Build / coverage
+dist/
+coverage/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
